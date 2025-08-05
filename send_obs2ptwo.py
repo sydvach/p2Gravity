@@ -190,7 +190,7 @@ def make_ymlfiles(nsplit, npts, runid, gaiaid, phis, ras, decs, objname):
             ymlfile.write(output)
 
         # Send OB to P2.
-        os.system('python /Users/svach/GravityGaia/p2Gravity/create_obs.py ' + ymlpath + ' --nogui')
+        os.system('python create_obs.py ' + ymlpath + ' --nogui')
         #os.system('python create_obs.py ' + ymlpath + ' --nogui')
 
 def send_to_p2(gaiaids, runid, odir, rho = 100, phi0 = 5., npts = 9, nsplit = 3, objnames=None):
