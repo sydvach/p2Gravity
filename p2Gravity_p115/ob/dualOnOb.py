@@ -22,14 +22,14 @@ class DualOnOb(ObservingBlock):
         the setup dict attribute will also by used to bypass some default values if required
         """
         self.acquisition = tpl.DualOnAxisAcq()
-        self._fill_magnitudes(self.yml)      
+        self._fill_magnitudes(self.yml)        
         # set target names
         if "ft_target" in self.yml:
-            self.acquisition["TEL.TARG.NAME"] = self.yml["ft_target"]
+            self.acquisition["SEQ.FT.ROBJ.NAME"] = self.yml["ft_target"]
         else:
             if not("target" in self.yml):
                 common.printerr("No 'target' specified in ObservingBlock")
-            self.acquisition["TEL.TARG.NAME"] = self.yml["target"]
+            self.acquisition["SEQ.FT.ROBJ.NAME"] = self.yml["target"]
         if "sc_target" in self.yml:
             self.acquisition["SEQ.INS.SOBJ.NAME"] = self.yml["sc_target"]
         else:

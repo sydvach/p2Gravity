@@ -18,7 +18,6 @@ class Template(dict):
         Note that no new field is created
         """
         for key in yml:
-            
             if key in self.params:
                 self[key] = yml[key]
         return None
