@@ -1,5 +1,7 @@
 # Tools to generate OBs for GRAVITY
 
+updated for P116 submission
+
 ## Requires: 
 - numpy
 - astropy, astroquery
