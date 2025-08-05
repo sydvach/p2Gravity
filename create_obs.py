@@ -138,8 +138,8 @@ if demo:
     # setup for testing on P2 demo server
     api = p2api.ApiConnection('demo', 52052, "tutorial")
 else:
-    user = 'sydneyvach'#input("ESO P2 username: ")
-    password = 'Hyabovu12!'#getpass("ESO P2 password: ")
+    user = input("ESO P2 username: ")
+    password = getpass("ESO P2 password: ")
     api = p2api.ApiConnection('production', user, password)
 
 if "bg" in dargs:
